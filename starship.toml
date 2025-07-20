@@ -1,0 +1,73 @@
+# Use custom format
+format = """
+[╭─ ](fg:my_light_gray)\
+[](fg:my_yellow)\
+$os\
+$username\
+[](bg:my_light_orange fg:my_yellow)\
+$git_branch\
+[](bg:my_orange fg:my_light_orange)\
+$time\
+[ ](fg:my_orange)\
+$directory\
+$line_break\
+[╰─ ](fg:my_light_gray)\
+$character"""
+
+palette = 'my_theme'
+
+[palettes.my_theme]
+my_yellow = '#ffc400'
+my_white = '#ffffff'
+my_dark_gray = '#282828'
+my_light_gray = '#adadad'
+my_light_orange = '#fc9403'
+my_orange = '#ff6600'
+
+[os]
+disabled = false
+style = "bg:my_yellow fg:my_dark_gray"
+
+[os.symbols]
+Windows = "󰍲"
+Macos = "󰀵"
+Linux = "󰌽"
+Android = ""
+Arch = "󰣇"
+
+[username]
+show_always = true
+style_user = "bg:my_yellow fg:my_dark_gray"
+style_root = "bg:my_yellow fg:my_dark_gray"
+format = '[ $user ]($style)'
+
+[git_branch]
+symbol = ""
+truncation_length = 4
+truncation_symbol = ''
+style = 'bg:my_light_orange fg:my_dark_gray'
+format = '[ $symbol $branch ]($style)'
+
+[directory]
+style = "fg:my_white"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[time]
+disabled = false
+time_format = "%R"
+format = '[  $time ]($style)'
+style = 'bg:my_orange fg:my_white'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:my_yellow)'
+error_symbol = '[](bold fg:my_yellow)'
+vimcmd_symbol = '[](bold fg:my_yellow)'
+vimcmd_replace_one_symbol = '[](bold fg:my_yellow)'
+vimcmd_replace_symbol = '[](bold fg:my_yellow)'
+vimcmd_visual_symbol = '[](bold fg:my_yellow)'

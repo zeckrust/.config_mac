@@ -1,0 +1,16 @@
+# Ignore everything
+*
+
+# Except these folders
+!aerospace/
+!aerospace/**
+!ghostty/
+!ghostty/**
+!sketchybar/
+!sketchybar/**
+
+# Except these files
+!.gitignore
+!starship.toml
+!README.md
+!neofetch.png
